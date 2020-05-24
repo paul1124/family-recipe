@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <main class="main">
+        <section class="recipe">
+            <div class="recipe-container">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="add-recipe-tab" data-toggle="tab" href="#add-recipe" role="tab" aria-controls="add-recipe" aria-selected="false">Add Recipe</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <div class="recipe-list">
+                        <div class="recipe-list-item">
+                          <div class="recipe-list-item-header">
+                            <h3 class="recipe-name">Stew</h3>
+                            <p class="recipe-date">May 23, 2020</p>
+                          </div>
+                          <div class="recipe-list-item-body">
+                            <div class="recipe-image-main-container">
+                              <img class="recipe-image-main" src="http://sikgaekwoodside.com/wp-content/uploads/2019/02/%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8E%E1%85%B5%E1%84%8D%E1%85%B5%E1%84%80%E1%85%A2-1170x679.jpg" alt="김치찌개">
+                            </div>
+
+                            <div class="recipe-list-item-action">
+                              <button type="button" class="recipe-learn-more">Learn More</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="recipe-list-item">
+                          <div class="recipe-list-item-header">
+                            <h3 class="recipe-name">Alio Olio</h3>
+                            <p class="recipe-date">May 23, 2020</p>
+                          </div>
+                          <div class="recipe-list-item-body">
+                            <div class="recipe-image-main-container">
+                              <img class="recipe-image-main" src="https://www.aberdeenskitchen.com/wp-content/uploads/2019/08/Pasta-Aglio-e-Olio-Garlic-and-Oil-Chef-Style-3.jpg" alt="alio olio">
+                            </div>
+
+                            <div class="recipe-list-item-action">
+                              <button type="button" class="recipe-learn-more">Learn More</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="recipe-list-item">
+                          <div class="recipe-list-item-header">
+                            <h3 class="recipe-name">장아찌</h3>
+                            <p class="recipe-date">May 23, 2020</p>
+                          </div>
+                          <div class="recipe-list-item-body">
+                            <div class="recipe-image-main-container">
+                              <img class="recipe-image-main" src="https://recipe1.ezmember.co.kr/cache/recipe/2018/03/07/5929a6105f7fecfc27b339757f9ae43a1.jpg" alt="장아찌">
+                            </div>
+
+                            <div class="recipe-list-item-action">
+                              <button type="button" class="recipe-learn-more">Learn More</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="add-recipe" role="tabpanel" aria-labelledby="add-recipe-tab">
+                      <div class="recipe-form">
+                        <label for="recipe-title">Name of Food</label>
+                        <input type="text" class="form-control" id="recipe-title" name="recipe-title" />
+
+                        <label for="recipe-author">Your Name</label>
+                        <input type="text" class="form-control" id="recipe-author" name="recipe-author" />
+
+                        <label for="recipe-ingredients">Ingredients</label>
+                        <div class="recipe-ingredients">
+                          <div class="recipe-ingredients-heading">
+                            Add/Remove ingredient
+                          </div>
+                          <div class="recipe-ingredient-list">
+                            <input type="text" class="form-control" data-type="ingredient-name">
+                            <input type="text" class="form-control" data-type="ingredient-amount">
+                            <button type="button" data-type="ingredient-delete">X</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                      <div class="contact-list">
+                        <div class="contact-list-item">
+                          <div class="contact-image-container">
+                            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/96375844_1175931266083870_1998868549673680896_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_oc=AQkhMWe6WUcCMXYybNFEW7hsvwbLZWoff4fh7RuiTpbgDOKGB7Cckpn8Gu9smbHI069dcqfop_y-6D_BoGsXi5Ru&_nc_ht=scontent-lax3-1.xx&oh=7ed6da833ea51f390e73b82e792e8abc&oe=5EEE0E2B" alt="contact image" class="contact-image">
+                          </div>
+                          <div class="contact-main">
+                            <p class="contact-main-name">Anna Hong</p>
+                            <p class="contact-main-number">(123) 456-7890</p>
+                          </div>
+                        </div>
+                        <div class="contact-list-item">
+                          <div class="contact-image-container">
+                            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/64296394_902623053414694_4541727413561720832_o.jpg?_nc_cat=108&_nc_sid=730e14&_nc_oc=AQno7u3RrN1B4C02Q1MzQvTdRGUAZ4IUPKUhGM8jdb1FSqk-ei3pMHu1hwEnpcE89kKTWgLJjcJD3MWTsoOtIkY8&_nc_ht=scontent-lax3-1.xx&oh=afca5aa74d655c36f5674b2d6d028c16&oe=5EEE459E" alt="contact image" class="contact-image">
+                          </div>
+                          <div class="contact-main">
+                            <p class="contact-main-name">David Hong</p>
+                            <p class="contact-main-number">(123) 456-7890</p>
+                          </div>
+                        </div>
+                        <div class="contact-list-item">
+                          <div class="contact-image-container">
+                            <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/13177241_1267606869934218_5033106197843270926_n.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_oc=AQlMWMm5T8rqqSJS-IW-FI90bkhirjRhTwub_nybYFfBMUhL5V3rwqmXyJlXxOuomoqUooWK6nVDzPFftLTUSqgn&_nc_ht=scontent-lax3-2.xx&oh=b1d8a6e43868bf7264c68a4481f64a21&oe=5EEE3CF3" alt="contact image" class="contact-image">
+                          </div>
+                          <div class="contact-main">
+                            <p class="contact-main-name">Paul Hong</p>
+                            <p class="contact-main-number">(123) 456-7890</p>
+                          </div>
+                        </div>
+                        <div class="contact-list-item">
+                          <div class="contact-image-container">
+                            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/11174762_947873425243134_2025695584312940558_n.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_oc=AQkPasb-cm6hc2jagbs5mx8RsJ-WDXEMOqU0-znakxwDSnYEM5utSjr5LvZ-vfeXo6HsxkFRguWHfAXGdags7mTC&_nc_ht=scontent-lax3-1.xx&oh=dd6e5df17a3028861eee31ce8652061c&oe=5EF07D1E" alt="contact image" class="contact-image">
+                          </div>
+                          <div class="contact-main">
+                            <p class="contact-main-name">Seojin Hyun</p>
+                            <p class="contact-main-number">(123) 456-7890</p>
+                          </div>
+                        </div>
+                        <div class="contact-list-item">
+                          <div class="contact-image-container">
+                            <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/13177241_1267606869934218_5033106197843270926_n.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_oc=AQlMWMm5T8rqqSJS-IW-FI90bkhirjRhTwub_nybYFfBMUhL5V3rwqmXyJlXxOuomoqUooWK6nVDzPFftLTUSqgn&_nc_ht=scontent-lax3-2.xx&oh=b1d8a6e43868bf7264c68a4481f64a21&oe=5EEE3CF3" alt="contact image" class="contact-image">
+                          </div>
+                          <div class="contact-main">
+                            <p class="contact-main-name">Brandy</p>
+                            <p class="contact-main-number">(123) 456-7890</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
