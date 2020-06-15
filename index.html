@@ -275,6 +275,9 @@
       //   //alert('hey');
       //   $(this).css('background-color', 'red');
       // })
+      $('#instruction').on('focus', function(e) {
+        $(this).parent().addClass('active');
+      })
       $('.instructions-form').on('click', function(e) {
         $(this).addClass('active');
       })
