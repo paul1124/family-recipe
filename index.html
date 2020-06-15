@@ -19,17 +19,17 @@
             <div class="recipe-container">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                      <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <a class="nav-link" id="add-recipe-tab" data-toggle="tab" href="#add-recipe" role="tab" aria-controls="add-recipe" aria-selected="false">Add Recipe</a>
+                      <a class="nav-link active" id="add-recipe-tab" data-toggle="tab" href="#add-recipe" role="tab" aria-controls="add-recipe" aria-selected="false">Add Recipe</a>
                     </li>
                     <li class="nav-item" role="presentation">
                       <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
                     </li>
                   </ul>
                   <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
                       <div class="recipe-list">
                         <div class="recipe-list-item">
                           <div class="recipe-list-item-header">
@@ -78,23 +78,133 @@
                         </div>
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="add-recipe" role="tabpanel" aria-labelledby="add-recipe-tab">
+                    <div class="tab-pane fade show active" id="add-recipe" role="tabpanel" aria-labelledby="add-recipe-tab">
                       <div class="recipe-form">
-                        <label for="recipe-title">Name of Food</label>
-                        <input type="text" class="form-control" id="recipe-title" name="recipe-title" />
 
-                        <label for="recipe-author">Your Name</label>
-                        <input type="text" class="form-control" id="recipe-author" name="recipe-author" />
 
-                        <label for="recipe-ingredients">Ingredients</label>
-                        <div class="recipe-ingredients">
-                          <div class="recipe-ingredients-heading">
-                            Add/Remove ingredient
+                        <div class="recipe-form-block">
+                          <label for="recipe-title">Title:</label>
+                          <input type="text" class="form-control" id="recipe-title" name="recipe-title" />
+                        </div>
+
+
+                        <div class="recipe-form-block">
+                          <label for="recipe-author">Author:</label>
+                          <input type="text" class="form-control" id="recipe-author" name="recipe-author" />
+                        </div>
+
+
+                        <div class="recipe-form-ingredient-list">
+                          <div class="ingredient-list-heading">
+                            <h3 class="ingredient-list-title">
+                              Ingredients:
+                            </h3>
                           </div>
-                          <div class="recipe-ingredient-list">
-                            <input type="text" class="form-control" data-type="ingredient-name">
-                            <input type="text" class="form-control" data-type="ingredient-amount">
-                            <button type="button" data-type="ingredient-delete">X</button>
+                          <div class="ingredient-list">
+                            <div class="ingredient-item">
+                              <p class="ingredient-item-name">
+                                Garlic
+                              </p>
+                              <p class="ingredient-item-amount">
+                                2 t
+                              </p>
+                            </div>
+                            <div class="ingredient-item">
+                              <p class="ingredient-item-name">
+                                Ginger
+                              </p>
+                              <p class="ingredient-item-amount">
+                                1 T
+                              </p>
+                            </div>
+                            <div class="ingredient-item">
+                              <p class="ingredient-item-name">
+                                Pepper
+                              </p>
+                              <p class="ingredient-item-amount">
+                                1 T
+                              </p>
+                            </div>
+                            <div class="ingredient-item">
+                              <p class="ingredient-item-name">
+                                Item
+                              </p>
+                              <p class="ingredient-item-amount">
+                                11 t
+                              </p>
+                            </div>
+                            <div class="ingredient-item">
+                              <p class="ingredient-item-name">
+                                Paprika
+                              </p>
+                              <p class="ingredient-item-amount">
+                                2 t
+                              </p>
+                            </div>
+                            <div class="ingredient-item">
+                              <p class="ingredient-item-name">
+                                Item
+                              </p>
+                              <p class="ingredient-item-amount">
+                                11 t
+                              </p>
+                            </div>
+                            <div class="ingredient-item">
+                              <p class="ingredient-item-name">
+                                Item
+                              </p>
+                              <p class="ingredient-item-amount">
+                                11 t
+                              </p>
+                            </div>
+                            <div class="ingredient-item">
+                              <p class="ingredient-item-name">
+                                Item
+                              </p>
+                              <p class="ingredient-item-amount">
+                                11 t
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="ingredient-add-container">
+                            <button type="button" id="add-ingredient" class="ingredient-add-button">Add ingredient</button>
+                            <div class="ingredient-add-form">
+                              <div class="ingredient-add-name">
+                                <label for="ingredient-name">Name</label>
+                                <input type="text" name="ingredient-name" class="form-control" placeholder="Minced Garlic" />
+                              </div>
+                              <div class="ingredient-add-amount">
+                                <label for="ingredient-amount">Amount</label>
+                                <div class="ingredient-add-amount-form-container">
+                                  <input type="text" name="ingredient-amount" class="form-control" placeholder="2" />
+                                  <input type="text" list="ingredient-measure" data-type="ingredient-measure" class="form-control" placeholder="T" />
+                                  <datalist id="ingredient-measure">
+                                    <option value="T">Tablespoon</option>
+                                    <option value="t">Teaspoon</option>
+                                    <option value="g">Gram</option>
+                                    <option value="cup">Cup</option>
+                                  </datalist>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="instructions">
+                          <div class="instructions-form-block">
+                            <div class="instructions-form-step">
+                              1
+                            </div>
+                            <form action="#" class="instructions-form">
+                              <textarea name="instruction" id="instruction" cols="30" rows="1" dir="auto"></textarea>
+                              <div class="instructions-form-functions">
+                                <div class="instructions-form-buttons">
+                                  <button type="button" class="instructions-form-button-sub"><i class="far fa-paperclip"></i></button>
+                                  <button type="button" class="instructions-form-button-main">Save</button>
+                                </div>
+                              </div>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -153,8 +263,31 @@
         </section>
     </main>
 
+    <script src="https://kit.fontawesome.com/b5fbefd9ea.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="scripts/autosize.js"></script>
+
+    <script type="text/javascript">
+      autosize($('#instruction')[0]);
+      // $('#instruction').on('focus', function(e) {
+      //   //alert('hey');
+      //   $(this).css('background-color', 'red');
+      // })
+      $('.instructions-form').on('click', function(e) {
+        $(this).addClass('active');
+      })
+      $(document).on('click', function(e) {
+        //console.log(e.target);
+        if($(e.target).closest('.instructions-form').length === 0) {
+          $('.instructions-form').removeClass('active');
+        }
+      })
+      $('#add-ingredient').on('click', function(e) {
+        $(this).parent().find('.ingredient-add-form').addClass('active');
+        $(this).addClass('active');
+      })
+    </script>
   </body>
 </html>

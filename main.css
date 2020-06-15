@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu';
+    font-family: 'Open Sans';
 }
 /* width */
 ::-webkit-scrollbar {
@@ -27,6 +27,8 @@
 main.main {
     max-height: 100vh;
     overflow-y: scroll;
+    background-color: #b3cce0;
+    min-height: 100vh;
 }
 section.recipe .recipe-container {
     max-width: 640px;
@@ -51,6 +53,9 @@ section.recipe .recipe-container .tab-content {
     border-top: 0;
     min-height: 600px;
     padding: 1rem;
+    background-color: #fff;
+}
+section.recipe .recipe-container .tab-content .tab-pane {
 }
 section.recipe .recipe-container .tab-content .tab-pane .recipe-list {
 
@@ -157,4 +162,242 @@ section.recipe .recipe-container .tab-content .tab-pane .contact-list .contact-l
 }
 section.recipe .recipe-container .tab-content .tab-pane .contact-list .contact-list-item .contact-main .contact-main-number {
     font-size: 0.75rem;
+}
+
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-block {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-bottom: 0.5rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-block label {
+    /* margin-right: 0.5rem; */
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-block .form-control {
+    height: unset;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list {
+    background-color: #dee2e6;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-list-heading {
+
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-list-heading .ingredient-list-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    margin-bottom: 0.5rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.5rem;
+    padding: 0.5rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-list .ingredient-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    font-size: 1rem;
+    color: #3f3c5b;
+    padding: 0.25rem 0.5rem;
+    border-top: dashed thin #3f3c5b;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-list .ingredient-item:first-child, section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-list .ingredient-item:nth-child(2) {
+    border-top: 0;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-list .ingredient-item p {
+    margin: 0;
+    letter-spacing: -0.035em;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-list .ingredient-item .ingredient-item-name {
+    font-weight: 600;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-list .ingredient-item .ingredient-item-amount {
+    font-size: 0.85rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-button {
+    border-radius: 4px;
+    border: none;
+    background-color: #3f3c5b;
+    font-size: 0.85rem;
+    /* font-weight: 600; */
+    color: #fafafa;
+    padding: 6px 12px;
+    margin-left: 0.5rem;
+    transition: background-color 0.1s ease-in-out;
+    margin: 0.75em 0;
+    max-width: 134px;
+    display: inline-block;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-button.active {
+    display: none;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-button:hover {
+    background-color: #153881;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: none;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form.active {
+    display: flex;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-name {
+
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-name label {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-name .form-control {
+    height: unset;
+    font-size: 0.75rem;
+    padding: 0.375rem 0.5rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-name .form-control::placeholder {
+    color: #ccc;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-amount {
+
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-amount label {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-amount .ingredient-add-amount-form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-amount .ingredient-add-amount-form-container .form-control {
+    height: unset;
+    padding: 0.375rem 0.5rem;
+    font-size: 0.75rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-amount .ingredient-add-amount-form-container .form-control::placeholder {
+    color: #ccc;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-amount .ingredient-add-amount-form-container .form-control:first-child {
+    max-width: 100px;
+    margin-right: 0.5rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .recipe-form-ingredient-list .ingredient-add-container .ingredient-add-form .ingredient-add-amount .ingredient-add-amount-form-container .form-control::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions {
+
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form-step {
+    width: 38px;
+    height: 38px;
+    background-color: #3f3c5b;
+    color: #fafafa;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 1px 2px -1px rgba(9,30,66,.25), 0 0 0 1px rgba(9,30,66,.08);
+    border-radius: 4px;
+    /* transition: box-shadow 85ms ease; */
+
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form.active {
+    padding-bottom: 2.5rem;
+    box-shadow: 0 4px 8px -2px rgba(9,30,66,.25), 0 0 0 1px rgba(9,30,66,.08);
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+    line-height: 1.75rem;
+    position: relative;
+    z-index: 1;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form textarea:focus {
+    outline: none;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form .instructions-form-functions {
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transition: all 0.25s ease-in-out;
+    opacity: 0;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form.active .instructions-form-functions {
+    top: unset;
+    bottom: 0;
+    opacity: 1;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form .instructions-form-functions .instructions-form-button-sub {
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: rgba(4, 15, 15, 0.5);
+    transition: color 0.1s ease-in-out;
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form .instructions-form-functions .instructions-form-button-sub:hover {
+    color: rgba(4, 15, 15, 0.8);
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form .instructions-form-functions .instructions-form-button-main {
+    border-radius: 4px;
+    border: none;
+    background-color: #3f3c5b;
+    font-size: 0.85rem;
+    /* font-weight: 600; */
+    color: #fafafa;
+    padding: 6px 12px;
+    margin-left: 0.5rem;
+    transition: background-color 0.1s ease-in-out;
+    
+}
+section.recipe .recipe-container .tab-content .tab-pane .recipe-form .instructions .instructions-form-block .instructions-form .instructions-form-functions .instructions-form-button-main:hover {
+    background-color: #153881;
 }
